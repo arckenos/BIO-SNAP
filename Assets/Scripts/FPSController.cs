@@ -83,7 +83,7 @@ public class FPSController : MonoBehaviour
         else
         {
             isWalking = false;
-            footSteps.SetActive(false);
+            footSteps.SetActive(false);      
         }
 
         move.y -= gravity * Time.deltaTime;
