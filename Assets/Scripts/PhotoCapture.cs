@@ -33,7 +33,7 @@ public class PhotoCapture : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetMouseButtonDown(0))
+        if (Input.GetMouseButtonDown(0) || OVRInput.Get(OVRInput.Button.Two) )
         {
             //TakeScreenshoot;
             if (!viewingPhoto)
