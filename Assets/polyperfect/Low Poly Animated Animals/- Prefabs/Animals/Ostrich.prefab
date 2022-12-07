@@ -29,7 +29,8 @@ Transform:
   m_GameObject: {fileID: 5964256182093435160}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 10, y: 10, z: 10}
+  m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 2997982332206458069}
   m_Father: {fileID: 0}
@@ -37,7 +38,7 @@ Transform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!95 &5964256182100698068
 Animator:
-  serializedVersion: 3
+  serializedVersion: 4
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -50,6 +51,7 @@ Animator:
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
   m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
@@ -163,6 +165,10 @@ PrefabInstance:
       value: Ostrich_Rig
       objectReference: {fileID: 0}
     - target: {fileID: 400112, guid: 35907a25ca0207845bd5017dac18432e, type: 3}
+      propertyPath: m_RootOrder
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400112, guid: 35907a25ca0207845bd5017dac18432e, type: 3}
       propertyPath: m_LocalPosition.x
       value: -0
       objectReference: {fileID: 0}
@@ -175,6 +181,10 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 400112, guid: 35907a25ca0207845bd5017dac18432e, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 400112, guid: 35907a25ca0207845bd5017dac18432e, type: 3}
       propertyPath: m_LocalRotation.x
       value: 0
       objectReference: {fileID: 0}
@@ -185,14 +195,6 @@ PrefabInstance:
     - target: {fileID: 400112, guid: 35907a25ca0207845bd5017dac18432e, type: 3}
       propertyPath: m_LocalRotation.z
       value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 400112, guid: 35907a25ca0207845bd5017dac18432e, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 400112, guid: 35907a25ca0207845bd5017dac18432e, type: 3}
-      propertyPath: m_RootOrder
-      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 400112, guid: 35907a25ca0207845bd5017dac18432e, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -215,7 +217,6 @@ PrefabInstance:
   m_SourcePrefab: {fileID: 100100000, guid: 35907a25ca0207845bd5017dac18432e, type: 3}
 --- !u!4 &2997982332206458069 stripped
 Transform:
-  m_CorrespondingSourceObject: {fileID: 400112, guid: 35907a25ca0207845bd5017dac18432e,
-    type: 3}
+  m_CorrespondingSourceObject: {fileID: 400112, guid: 35907a25ca0207845bd5017dac18432e, type: 3}
   m_PrefabInstance: {fileID: 2997982332206857765}
   m_PrefabAsset: {fileID: 0}

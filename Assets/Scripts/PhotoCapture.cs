@@ -19,21 +19,25 @@ public class PhotoCapture : MonoBehaviour
     [SerializeField] private Animator fadingAnimation;
 
 
+    private Notebook notebook;
 
     private Texture2D screenCapture;
+
+
 
 
     // Start is called before the first frame update
     void Start()
     {
-        screenCapture = new Texture2D(Screen.width, Screen.height, TextureFormat.RGB24, false);
+        //screenCapture = new Texture2D(Screen.width, Screen.height, TextureFormat.RGB24, false);
+        notebook = GetComponent<Notebook>();
         
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetMouseButtonDown(0))
+        if (Input.GetMouseButtonDown(0) && !notebook.isOpen)
         {
             //TakeScreenshoot;
             if (!viewingPhoto)
@@ -52,7 +56,7 @@ public class PhotoCapture : MonoBehaviour
     IEnumerator CapturePhoto()
     {
         yield return new WaitForEndOfFrame();
-
+        screenCapture = new Texture2D(Screen.width, Screen.height, TextureFormat.RGB24, false);
         Rect regionToRead = new Rect(0, 0, Screen.width, Screen.height);
 
         screenCapture.ReadPixels(regionToRead, 0, 0, false);
@@ -90,6 +94,6 @@ public class PhotoCapture : MonoBehaviour
     {
         viewingPhoto = false;
         photoFrame.SetActive(false);
-
+        notebook.AddPhoto(screenCapture);
     }
 }
